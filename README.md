@@ -35,16 +35,14 @@ Esta é uma API RESTful desenvolvida em ASP.NET Core 8 para gerenciar o cadastro
     - Um editor de código de sua preferência (Visual Studio 2022, VS Code, Rider).
 
 ##⚙️ Como Executar o Projeto
-
     Clone o repositório:
+
 ```bash
     git clone <URL_DO_SEU_REPOSITORIO>
     cd ApiClientes
 ````
 Configure a Conexão com o Banco de Dados:
-
     Abra o arquivo appsettings.json.
-
     Altere a string de conexão DefaultConnection para apontar para a sua instância do SQL Server. O banco de dados DbClientes será criado automaticamente.
 
 ```bash
@@ -68,10 +66,9 @@ dotnet ef database update
 ````
 
 Execute a Aplicação:
-Bash
-
+```Bash
     dotnet run
-
+````
     Acesse a Documentação:
 
         Após a execução, a API estará disponível.
