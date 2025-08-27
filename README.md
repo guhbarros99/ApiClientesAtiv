@@ -4,15 +4,15 @@ Esta é uma API RESTful desenvolvida em ASP.NET Core 8 para gerenciar o cadastro
 
 ##✨ Funcionalidades
 
-    - **CRUD de Clientes**: Operações completas para criar, ler, atualizar e deletar clientes.
+    - CRUD de Clientes: Operações completas para criar, ler, atualizar e deletar clientes.
 
-    - **CRUD de Endereços**: Operações completas para gerenciar múltiplos endereços associados a um cliente.
+    - CRUD de Endereços: Operações completas para gerenciar múltiplos endereços associados a um cliente.
 
-    - **Validação de CPF**: Validação de CPF em tempo real no momento do cadastro, utilizando o serviço público do scpa-backend.saude.gov.br.
+    - Validação de CPF: Validação de CPF em tempo real no momento do cadastro, utilizando o serviço público do scpa-backend.saude.gov.br.
 
-    - **Relacionamento de Dados**: Um cliente pode ter múltiplos endereços, e a exclusão de um cliente remove seus endereços em cascata (OnDelete(DeleteBehavior.Cascade)).
+    - Relacionamento de Dados: Um cliente pode ter múltiplos endereços, e a exclusão de um cliente remove seus endereços em cascata (OnDelete(DeleteBehavior.Cascade)).
 
-    - **Documentação de API**: Geração automática de documentação interativa com Swagger (OpenAPI).
+    - Documentação de API: Geração automática de documentação interativa com Swagger (OpenAPI).
 
 ##🚀 Tecnologias Utilizadas
 
@@ -34,36 +34,38 @@ Esta é uma API RESTful desenvolvida em ASP.NET Core 8 para gerenciar o cadastro
 
     - Um editor de código de sua preferência (Visual Studio 2022, VS Code, Rider).
 
-⚙️ Como Executar o Projeto
+##⚙️ Como Executar o Projeto
 
     Clone o repositório:
-    Bash
-
-git clone <URL_DO_SEU_REPOSITORIO>
-cd ApiClientes
-
+```bash
+    git clone <URL_DO_SEU_REPOSITORIO>
+    cd ApiClientes
+````
 Configure a Conexão com o Banco de Dados:
 
     Abra o arquivo appsettings.json.
 
     Altere a string de conexão DefaultConnection para apontar para a sua instância do SQL Server. O banco de dados DbClientes será criado automaticamente.
 
-JSON
-
+```bash
 "ConnectionStrings": {
-  "DefaultConnection": "Server=SEU_SERVIDOR;Database=DbClientes;Trusted_Connection=True;TrustServerCertificate=True;"
+  "DefaultConnection": "Server=TIT0676517W11-1\\SQLEXPRESS;Database=DbClientes;Trusted_Connection=True;TrustServerCertificate=True;"
 }
+````
 
 Instale as Ferramentas do EF Core (se não tiver):
-Bash
 
+```Bash
 dotnet tool install --global dotnet-ef
+````
 
 Aplique as Migrations:
 Este comando irá criar o banco de dados e as tabelas Clientes e Enderecos com base na configuração do projeto.
-Bash
 
+
+```Bash
 dotnet ef database update
+````
 
 Execute a Aplicação:
 Bash
